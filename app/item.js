@@ -1,11 +1,7 @@
 import React from "react"
 
-function Item(){
-    let model = {
-        title: "This is a test title"
-    }
-
-    return (<div>{model.title}</div>);
+function Item({data}){
+    return (<div>{data}</div>);
 }
 
 export default Item;

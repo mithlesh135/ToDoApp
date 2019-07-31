@@ -1,19 +1,10 @@
 import React from "react"
 import Item from "./item"
 
-function List(){
-    let todos = [{
-        title: "This is a test title"
-    },
-    {
-        title: "This is a test title"
-    }]
-
-    let ls = todos.map(() => {
-        return <Item/>
+function List({data: todos}){
+    return todos.map((itemData, index) => {
+        return <Item data={itemData} key={index}/>
     });
-
-    return (<div>{ls}</div>);
 }
 
 export default List;
