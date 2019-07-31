@@ -1,11 +1,14 @@
 import React from "react"
+import Api from "./api"
 
 function Item(){
-    let model = {
-        title: "This is a test title"
-    }
+    Api.post({
+        title: "This is a new service"
+    })
 
-    return (<div>{model.title}</div>);
+    let posts = Api.getAll();
+
+    return (<li><span>{posts[0].id}</span><span>{posts[0].title}</span></li>);
 }
 
 export default Item;
